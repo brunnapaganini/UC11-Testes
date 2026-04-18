@@ -1,0 +1,13 @@
+{
+  "name": "uc11-testes",
+  "version": "1.0.0",
+  "description": "Aulas da UC11, sobre testes de versionamento.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
