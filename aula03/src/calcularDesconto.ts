@@ -15,3 +15,13 @@ export function validarIdade(idade:number):boolean {
     }
     return false;
 }
+
+export function statusAluno(nota:number,frequencia:number):string{
+    if(nota >= 70 && frequencia < 75){
+        return "Recuperação";
+    } else if (nota >= 70 && frequencia > 75) {
+        return "Aprovado";
+    } else {
+        return "Reprovado";
+    }
+}

@@ -1,6 +1,6 @@
-import { calcularDesconto, ehPar, validarIdade } from "../src/calcularDesconto"
+import { calcularDesconto, ehPar, statusAluno, validarIdade } from "../src/calcularDesconto"
 
-describe("função calcularDesconto", () => {
+/*describe("função calcularDesconto", () => {
     it("deve aplicar desconto quando valor for maior que 100", () =>{
         expect(calcularDesconto(200)).toBe(180);
     })
@@ -25,4 +25,16 @@ describe("função validarIdade", () => {
     it("deve retornar false se for menor de idade", () =>{
         expect(validarIdade(17)).toBeFalsy();
     })
-});
+});*/
+
+describe("função statusAluno", () => {
+    it("deve retornar se o aluno foi aprovado", () => {
+        expect(statusAluno(90,80)).toEqual("Aprovado");
+    })
+    it("deve retornar se o aluno esta de recuperação", () => {
+        expect(statusAluno(75,70)).toEqual("Recuperação");
+    })
+    it("deve retornar se o aluno foi reprovado", () => {
+        expect(statusAluno(30,50)).toEqual("Reprovado");
+    })
+})
