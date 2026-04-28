@@ -1,4 +1,4 @@
-import {calcularFrete} from '../src/index'
+import {calcularFrete,ehPar} from '../src/index'
 
 describe("Deve calcular frete",() => {
     it("deve retornar o frete gratuito ", () =>{
@@ -8,3 +8,12 @@ describe("Deve calcular frete",() => {
         expect(calcularFrete(100)).toBe(20);
     });
 });
+
+describe("função ehPar", () => {
+    it("deve retornar true se for numero par", () =>{
+        expect(ehPar(2)).toBeTruthy();
+    })
+    it("deve retornar false se for numero impar", () =>{
+        expect(ehPar(3)).toBeFalsy();
+    })
+})
