@@ -1,0 +1,14 @@
+import { Router, response } from "express";
+import { UserController } from "../controller/UserController";
+
+const userRoutes = Router();
+const userController = new UserController();
+
+userRoutes.post("/users",(request,response) =>
+    userController.create(request,response));
+userRoutes.get("/users",(request,response) =>
+    userController.list(request,response));
+userRoutes.get("/users/:id",(request,response) =>
+    userController.findById(request,response));
+
+export{ userRoutes };
