@@ -24,4 +24,12 @@ export class UserService{
     findUserById(id:number):User | undefined{
         return this.users.find((user) => user.id === id);
     }
+    findUserByEmail(email:String):User | undefined{
+        return this.users.find((user) => user.email === email);
+    }
+    /*validation(name:String): User{
+        if(name === trim(name)){
+
+        }
+    }*/
 }

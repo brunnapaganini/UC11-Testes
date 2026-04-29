@@ -25,4 +25,12 @@ export class UserController{
         }
         return response.status(200).json(user);
     }
+    findByEmail(request: Request, response: Response): Response{
+        const email = String(request.params.email);
+        const user = userService.findUserByEmail(email);
+        if(!user){
+            return response.status(404).json({error: "Usuário não encontrado"})
+        }
+        return response.status(200).json(user);
+    }
 }
