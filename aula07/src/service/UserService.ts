@@ -3,7 +3,7 @@ export class UserService{
     private users: User[] = [];
     private currentId = 1;
 
-    createUser(name:string,email:string): User {
+    createUser(name:string,email:string,data_nascimento:string,cpf:string): User {
         if(!name || !email){
             throw new Error("Nome e email são obrigatórios");
         }
@@ -13,7 +13,9 @@ export class UserService{
         }
         const newUser: User = {id:this.currentId++,
             name,
-            email
+            email,
+            cpf,
+            data_nascimento
         };
         this.users.push(newUser);
         return newUser;
